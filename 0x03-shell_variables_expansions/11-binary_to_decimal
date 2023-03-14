@@ -1,0 +1,2 @@
+#!/bin/bash;binary=$BINARY;decimal=0;power=1
+while [ $binary -gt 0 ];do  digit=$((binary % 10))  decimal=$((decimal + digit * power))  binary=$((binary / 10))  power=$((power * 2))done;echo $decimal
