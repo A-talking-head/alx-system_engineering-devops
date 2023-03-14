@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# List all local variables
+echo "Local variables:"
+set | grep "^[[:alpha:]_][[:alnum:]_]*=.*$" | sort
+
+# List all environment variables
+echo "Environment variables:"
+env | sort
+
+# List all functions
+echo "Functions:"
+declare -F | awk '{print $3}'
